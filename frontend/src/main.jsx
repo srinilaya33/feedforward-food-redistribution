@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import axios from 'axios'
+axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 
 // Configure axios to include Authorization header for all requests
 axios.interceptors.request.use(
