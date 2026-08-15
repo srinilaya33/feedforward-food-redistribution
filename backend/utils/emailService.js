@@ -14,8 +14,7 @@ const createTransporter = () => {
 // ✅ FIX: always use EMAIL_USER as sender
 const FROM_EMAIL = process.env.EMAIL_USER || 'noreply@feedforward.com';
 const FRONTEND_BASE_URL = process.env.FRONTEND_URL || 'http://localhost:3000';
-console.log("EMAIL_USER:", process.env.EMAIL_USER);
-console.log("EMAIL_PASSWORD:", process.env.EMAIL_PASSWORD);
+
 // ================= EMAIL VERIFICATION =================
 exports.sendVerificationEmail = async (user, verificationToken) => {
   try {
